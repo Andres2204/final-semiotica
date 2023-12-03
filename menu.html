@@ -30,39 +30,52 @@
     <header id="navbar" style="width: 100%"></header>
 
     <main class="dinamic-bg">
-      <div class="container d-flex flex-wrap" id="menuContainer">
-        <div class="card m-3" style="max-width: 390px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="./assets/img/${dish.id}.jpg"
-                class="img-fluid rounded-start w-100 h-100 object-fit-cover"
-                alt="imagen${dish.id}"
-              />
+
+      <div id="menuContainer"></div>
+
+      <div class="card " style="max-width: 390px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/img/1.jpg" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="Card Image" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card Title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Price: $9.65</small>
+              </p>
+              <button class="btn btn-primary toggleDetailsBtn">Mostrar Detalles</button>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contenedor separado para los detalles -->
+      <div class="details-container" style="display: none;">
+        <div class="card mb-3" style="max-width: 390px">
+          <div class="row g-0">
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">${dish.dish_name}</h5>
-                <p class="card-text desc">${dish.description}</p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    >Price: $${dish.price.toFixed(2)}</small
-                  >
-                </p>
-                <button
-                  class="btn btn-primary extractIdBtn"
-                  data-dish-id="${dish.id}"
-                >
-                  Extraer ID
-                </button>
-                <button class="expandirbtn">
-                  <i class="fa-solid fa-chevron-up"></i>
-                </button>
+                <!-- Contenido de detalles (pueden ser los ingredientes, por ejemplo) -->
+                <p>Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
+      <script>
+        $(document).ready(function () {
+          // Evento de clic para mostrar/ocultar detalles
+          $(document).on('click', '.toggleDetailsBtn', function () {
+            var detailsContainer = $('.details-container');
+            detailsContainer.slideToggle();
+          });
+        });
+      </script>
 
       <button
         class="btn m-4 btn-rounded btn-primary"
@@ -82,7 +95,7 @@
       $("#navbar").load("/navbar.html");
     </script>
 
-    <script src="./assets/js/carrito.js"></script>
+    <script src="./assets/js/menu.js"></script>
 
     <script
       src="https://kit.fontawesome.com/48ff61c814.js"
