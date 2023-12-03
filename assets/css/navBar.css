@@ -23,10 +23,12 @@ html {
   font-size: xx-large;
   margin-right: 30px;
   color: lightgray;
+  cursor: pointer;
 }
 
 .fa-regular {
   font-size: xx-large;
   margin-right: 30px;
   color: lightgray;
+  cursor: pointer;
 }
