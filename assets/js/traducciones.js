@@ -1,4 +1,3 @@
-// script.js
 let idiomaActual = 'es';
 
 function cambiarIdioma() {
@@ -21,6 +20,5 @@ function getTextoTraducido(clave) {
 }
 
 $(document).ready(function() {
-    // Cargar el contenido del otro archivo HTML usando jQuery
-    $('#titulo').load('./index.html #titulo');
+    $('#titulo').load('index.html #titulo');
 });
