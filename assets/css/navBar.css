@@ -1,0 +1,32 @@
+html {
+  background-color: #373F47;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.nav-left {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.fa-solid {
+  font-size: xx-large;
+  margin-right: 30px;
+  color: lightgray;
+}
+
+.fa-regular {
+  font-size: xx-large;
+  margin-right: 30px;
+  color: lightgray;
+}
