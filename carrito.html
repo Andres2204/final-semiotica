@@ -20,7 +20,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="assets/css/index.css" />
 
     <title>Nombre</title>
@@ -28,13 +27,26 @@
   <body>
     <header id="navbar" style="width: 100%"></header>
 
-    <main class="dinamic-bg">
+    <main class="m-2">
+      <div class="container">
+        <div class="card">
+          <div class="card-header container-fluid">
+            <h3>Carrito de compras</h3>
+            <button class="btn btn-primary">comprar!</button>
+          </div>
 
+          <div class="card-body">
+            <div id="productosCarrito"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script>
       $("#navbar").load("/navbar.html");
     </script>
+
+    <script src="assets/js/carrito.js"></script>
 
     <script
       src="https://kit.fontawesome.com/48ff61c814.js"
