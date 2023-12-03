@@ -4,6 +4,12 @@
     --azul-oscuro: #373F47;
     --amarillo-claro: #FFF0C0;
     --rojo: #9D0208;
+    --backgroudColor: var(--azul-oscuro);
+    --navBackgroud: var(--amarillo-claro)
+}
+
+.dinamic-bg {
+    background-color: var(--backgroudColor);
 }
 
 i {
@@ -23,4 +29,8 @@ i {
 .boton-grande:hover {
     background-color: #1b1f22;
     color: whitesmoke;
+}
+
+.desc {
+    font-size: x-small;
 }
