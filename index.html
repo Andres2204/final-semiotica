@@ -9,6 +9,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="./assets/js/index.js"></script>
     <script src="./assets/js/traducciones.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -34,24 +35,30 @@
   </head>
   <body>    
     <main class="dinamic-bg">
-      <iframe src="navBar.html" frameborder="0" width="100%" height="60px"></iframe>
+      <div id="navbar-container"></div>
       <div
         class="bg-image"
         style="background-image: url(./assets/img/index.jpg); height: 390.5px; background-position: center; background-size: cover;">
         <div class="d-flex justify-content-center align-items-center h-100 flex-column">
-          <h1 class="titulo text-white mb-0">Bienvenido</h1>
+          <h1 class="bienvenido text-white mb-0">Bienvenido</h1>
         </div>
       </div>
       <div
         id="acciones"
         class="d-flex flex-row justify-content-between p-5"
         style="width: 100%">
-        <button class="btn m-4 btn-secondary boton-grande">Llamar Mesero</button>
-        <button class="btn m-4 btn-secondary boton-grande" onclick="location.href='menu.html'">Ver menu</button>
+        <button class="btn m-4 btn-secondary boton-grande llamar">Llamar Mesero</button>
+        <button class="btn m-4 btn-secondary boton-grande menu" onclick="location.href='menu.html'">Ver Menu</button>
         <a href="ayuda.html">
-          <button class="btn m-4 btn-secondary boton-grande">¿Necesitas ayuda?</button>
+          <button class="btn m-4 btn-secondary boton-grande ayuda">¿Necesitas Ayuda?</button>
         </a>
       </div>
     </main>
+    <script>
+      $(document).ready(function() {
+          // Utiliza jQuery para cargar el contenido de navbar.html
+          $("#navbar-container").load("navBar.html");
+      });
+    </script>
   </body>
 </html>

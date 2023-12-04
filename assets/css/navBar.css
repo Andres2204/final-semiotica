@@ -1,5 +1,5 @@
 html {
-  background-color: #373F47;
+  background-color: dimgrey !important;
 }
 
 .container-fluid {
@@ -22,13 +22,13 @@ html {
 .fa-solid {
   font-size: xx-large;
   margin-right: 30px;
-  color: lightgray;
+  color: black;
   cursor: pointer;
 }
 
 .fa-regular {
   font-size: xx-large;
   margin-right: 30px;
-  color: lightgray;
+  color: black;
   cursor: pointer;
 }

@@ -1,0 +1,12 @@
+table {
+  max-width: 100%;
+  table-layout: fixed;
+
+}
+
+td, th {
+  max-width: 330px; /* o cualquier otro valor que funcione para tu contenido */
+  white-space: nowrap; /* Evita que el texto se envuelva en varias líneas */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para indicar que hay más contenido */
+}

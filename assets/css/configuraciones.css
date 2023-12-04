@@ -1,0 +1,23 @@
+.redes {
+  display: inline-grid;
+  justify-items: center;
+  font-size: xx-large;
+}
+
+i {
+  cursor: pointer;
+}
+
+.dinamic-bg {
+  background-color: var(--backgroudColor);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  --azul-oscuro: #373F47;
+  --amarillo-claro: #FFF0C0;
+  --rojo: #9D0208;
+  --backgroudColor: var(--azul-oscuro);
+  --navBackgroud: var(--amarillo-claro)
+}
