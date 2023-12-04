@@ -15,8 +15,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="assets/css/index.css" />
-
-  <title>Nombre</title>
+  <script src="./assets/js/traducciones.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        actualizarTraducciones();
+    });
+  </script>
+  <title>Registro</title>
 </head>
 
 <body>
@@ -30,19 +35,19 @@
               <div class="card bg-dark text-white" style="border-radius: 1rem;">
                 <div class="card-body p-5 text-center">
                   <div class="mb-md-5 mt-md-4 pb-5" style="height: 27rem;">
-                    <h2 class="fw-bold mb-2 text-uppercase">Registrarse</h2>
-                    <p class="text-white-50 mb-5">Porfavor ingrese su usuario y contraseña</p>
+                    <h2 class="register fw-bold mb-2 text-uppercase">Registrarse</h2>
+                    <p class="user text-white-50 mb-5">Porfavor ingrese su usuario y contraseña</p>
                     <div class="form-outline form-white mb-4">
                       <input type="email" id="typeEmailX" class="form-control form-control-lg" />
                       <label class="form-label" for="typeEmailX">Email</label>
                     </div>
                     <div class="form-outline form-white mb-4">
                       <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                      <label class="form-label" for="typePasswordX">Contraseña</label>
+                      <label class="pass form-label" for="typePasswordX">Contraseña</label>
                     </div>
                     <div class="form-outline form-white mb-4">
                       <input type="password" id="typePasswordXconfir" class="form-control form-control-lg" />
-                      <label class="form-label" for="typePasswordXconfir">Confirmar Contraseña</label>
+                      <label class="confirm-pass form-label" for="typePasswordXconfir">Confirmar Contraseña</label>
                     </div>
                     <div>
                       <button class="btn btn-outline-light btn-lg px-5" type="submit"

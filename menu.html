@@ -24,7 +24,13 @@
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/menu.css" />
 
-    <title>Menu</title>
+    <title>Menú</title>
+    <script src="./assets/js/traducciones.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          actualizarTraducciones();
+      });
+    </script>
   </head>
   <body>
 
@@ -34,7 +40,7 @@
       <div id="menuContainer" class="p-2 row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0"></div>
 
       <button
-        class="btn m-4 btn-rounded btn-primary"
+        class="carrito btn m-4 btn-rounded btn-primary"
         onclick="location.href='carrito.html'"
         style="display: absolute; position: sticky; bottom: 50px; right: 50px"
       >
