@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" id="elementoConTema">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,11 +15,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="assets/css/index.css" />
-
+  <script src="./assets/js/traducciones.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      tema();
+    });
+  </script>
+  <title>Login</title>
   <title>Usuario</title>
 </head>
 
-<body class="bg-image" style="background-image: url('assets/img/Rectángulo6.png');">
+<body ">
   <header id="navbar" style="width: 100%"></header>
 
   <main>
@@ -32,7 +38,7 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-3">
-                <label for="" class="form-label">Usuario</label>
+                <label for="" class="user2 form-label">Usuario</label>
                 <input type="text" class="form-control" name="" id="usuario" aria-describedby="helpId"
                   placeholder="">
               </div>
@@ -43,7 +49,7 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-3">
-                <label for="" class="form-label">Contraseña</label>
+                <label for="" class="pass form-label">Contraseña</label>
                 <input type="text" class="form-control" name="" id="contraseña" aria-describedby="helpId"
                   placeholder="">
               </div>
@@ -65,7 +71,7 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-3">
-                <label for="" class="form-label">Cedula</label>
+                <label for="" class="cedula form-label">Cedula</label>
                 <input type="text" class="form-control" name="" id="cedula" aria-describedby="helpId"
                   placeholder="">
               </div>
@@ -76,7 +82,7 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-3">
-                <label for="" class="form-label">Fecha de Nacimiento</label>
+                <label for="" class="fecha form-label">Fecha de Nacimiento</label>
                 <input type="text" class="form-control" name="" id="FechaNacimiento" aria-describedby="helpId"
                   placeholder="">
               </div>

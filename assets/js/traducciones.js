@@ -64,6 +64,10 @@ function getTextoTraducido(clave) {
           'es': 'Ingrese su usuario y contraseña',
           'en': 'Type your user and password'
         },
+        'user2': {
+          'es': 'Usuario',
+          'en': 'User'
+        },
         'pass': {
           'es': 'Contraseña',
           'en': 'Password'
@@ -88,6 +92,14 @@ function getTextoTraducido(clave) {
           'es': 'Precio Adicional',
           'en': 'Aditional Price'
         },
+        'cedula': {
+          'es': 'Cedula',
+          'en': 'ID'
+        },
+        'fecha': {
+          'es': 'Fecha de Nacimiento',
+          'en': 'Birthday'
+        },
     };
 
     return traducciones[clave][idiomaActual];
@@ -111,6 +123,9 @@ function actualizarTraducciones() {
   const elementosCarritocomp = document.querySelectorAll('.carritocomp');
   const elementosComprar = document.querySelectorAll('.comprar');
   const elementosAdicional = document.querySelectorAll('.adicional');
+  const elementosUser2 = document.querySelectorAll('.user2');
+  const elementosCedula = document.querySelectorAll('.cedula');
+  const elementosFecha = document.querySelectorAll('.fecha');
   
   elementosTitulo.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('bienvenido');
@@ -145,6 +160,9 @@ function actualizarTraducciones() {
   elementosUser.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('user');
   });
+  elementosUser2.forEach(function (elemento) {
+    elemento.innerText = getTextoTraducido('user2');
+  });
   elementosPass.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('pass');
   });
@@ -162,5 +180,11 @@ function actualizarTraducciones() {
   });
   elementosAdicional.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('adicional');
+  });
+  elementosCedula.forEach(function (elemento) {
+    elemento.innerText = getTextoTraducido('cedula');
+  });
+  elementosFecha.forEach(function (elemento) {
+    elemento.innerText = getTextoTraducido('fecha');
   });
 }
