@@ -226,7 +226,7 @@ $(document).ready(function () {
     <div class="row g-0">
       <img
         src="./assets/img/platos/${dish.id}.jpg"
-        class="img-fluid rounded w-100 h-100 object-fit-cover card-img-top"
+        class="img-fluid rounded-top w-100 h-100 object-fit-cover card-img-top"
         alt="Card Image"
       />
       <div class="container">

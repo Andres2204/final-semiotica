@@ -12,10 +12,9 @@ $(document).ready(function () {
 
     dish.ingredients.forEach((e) => {
       if (e.name != "" && e.name != "additionalNotes") {
-
-        additionalPrice += parseFloat( e.name.split("$")[1] );
+        additionalPrice += parseFloat(e.name.split("$")[1]);
         console.log(additionalPrice);
-       
+
         ingredientes += `
         <div class="form-check">
         <label class="form-check-label" for="${e.name}"
@@ -33,17 +32,15 @@ $(document).ready(function () {
     <div class="row g-0">
       <img
         src="./assets/img/platos/${dish.dishId}.jpg"
-        class="img-fluid rounded w-100 h-100 object-fit-cover card-img-top"
+        class="img-fluid rounded-top w-100 h-100 object-fit-cover card-img-top"
         alt="Card Image"
       />
       <div class="container">
         <div class="card-body w-100">
         <h5 class="card-title">${dish.dishName}</h5>
           <p class="card-text">
-            ${dish.description}
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Price: $${dish.dishPrice}</small>
+            <small class="text-muted">Price: $${dish.dishPrice}</small><br>
+            <small class="text-muted">Cantidad: ${dish.quantity}</small>
           </p>
           
           <!-- Contenedor flexible para los botones con mayor separación -->
@@ -76,7 +73,9 @@ $(document).ready(function () {
                     <!-- Formulario con checkboxes y campo de texto -->
                     <form class="ingredientForm">
                     <div class="mb-3">
-                        <label class="form-label">${ingredientes ? "Ingredientes:":""}</label>
+                        <label class="form-label">${
+                          ingredientes ? "Ingredientes:" : ""
+                        }</label>
                         ${ingredientes}  
                         <label class="form-label">Precio Adicional: ${additionalPrice}</label>
                         <!-- Agrega más checkboxes según sea necesario -->
@@ -114,21 +113,21 @@ $(document).ready(function () {
     $("#productosCarrito").append(newCardElement);
   });
 
+  $(document).on("click", ".comprar", function () {
+    localStorage.setItem("compra", JSON.stringify(generateInvoiceData(getCart())));
+    $(location).attr('href',"pago.html");
+  });
+
   $(document).on("click", ".eliminarCarrito", function () {
     // Obtener el ID del plato desde el atributo de datos del botón
     var dishId = $(this).data("dish-id");
     console.log(dishId);
-
 
     // Eliminar el plato del carrito
     removeFromCart(dishId);
 
     location.reload(); // Ejemplo: recargar la página
   });
-
-
-  console.log(generateInvoiceData(getCart()))
-
 });
 
 function generateInvoiceData(cart) {
@@ -140,11 +139,11 @@ function generateInvoiceData(cart) {
     let dish = value;
 
     // Calcular el precio total teniendo en cuenta la cantidad
-    
+
     // Calcular el precio adicional de los ingredientes
     var additionalPrice = 0;
     var ingredientes = [];
-    
+
     dish.ingredients.forEach((e) => {
       if (e.name !== "" && e.name !== "additionalNotes") {
         additionalPrice += parseFloat(e.name.split("$")[1]);
@@ -152,7 +151,7 @@ function generateInvoiceData(cart) {
       }
     });
 
-    var totalPrice = dish.quantity * (additionalPrice);
+    var totalPrice = dish.quantity * (dish.dishPrice + additionalPrice);
 
     // Crear un objeto con la información de la factura
     var invoiceItem = {
@@ -172,8 +171,6 @@ function generateInvoiceData(cart) {
 
   return invoiceData;
 }
-
-
 
 // Función para obtener el carrito del Local Storage
 function getCart() {
