@@ -246,3 +246,10 @@ function clearCart() {
   // Limpiar el carrito en el Local Storage
   localStorage.removeItem("carrito");
 }
+
+function tema() {
+  console.log('entra')
+  let actual = localStorage.getItem('darkmode')
+  var elementoConTema = document.getElementById("elementoConTema");
+  elementoConTema.setAttribute("data-bs-theme", actual);
+}
