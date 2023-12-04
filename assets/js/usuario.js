@@ -33,5 +33,4 @@ $("#guardar").click(function (e) {
         usuariosGuardados[i].fechaNacimiento = $("#FechaNacimiento").val();
     }
     localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
-    console.log(usuariosGuardados[i]);
 });

@@ -18,7 +18,6 @@ alert("por favor rellena todos los espacios...!!!!!!");
         alert('Inicio de sesión exitoso');
         // Puedes redirigir a otra página o realizar acciones adicionales después del inicio de sesión
         localStorage.setItem("login",nombreUsuarioLogin);
-        console.log(localStorage.getItem('usuarios'));
         location.href = "usuario.html";
     } else {
         alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
