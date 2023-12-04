@@ -10,5 +10,5 @@ function goToConfig() {
 }
 
 function goToUser() {
-  window.location.href = "usuario.html"
+  window.location.href = "login.html"
 }

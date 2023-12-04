@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     alert("¡Pago procesado con éxito! Saliendo...");
     localStorage.clear();
-    window.location.href = "registrar.html"
+    window.location.href = "index.html"
 
   });
 });
