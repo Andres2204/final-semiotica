@@ -36,6 +36,9 @@ $(document).ready(function () {
     // Aquí puedes agregar lógica para procesar el pago, como enviar los datos a un servidor, etc.
     // También puedes actualizar la interfaz de usuario según el resultado del pago
 
-    alert("¡Pago procesado con éxito!");
+    alert("¡Pago procesado con éxito! Saliendo...");
+    localStorage.clear();
+    window.location.href = "registrar.html"
+
   });
 });
