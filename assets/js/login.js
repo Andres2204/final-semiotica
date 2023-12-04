@@ -31,4 +31,3 @@ function tema() {
     var elementoConTema = document.getElementById("elementoConTema");
     elementoConTema.setAttribute("data-bs-theme", actual);
   }
-
