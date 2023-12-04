@@ -9,6 +9,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="./assets/js/index.js"></script>
     <script src="./assets/js/traducciones.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -34,7 +35,7 @@
   </head>
   <body>    
     <main class="dinamic-bg">
-      <iframe src="navBar.html" frameborder="0" width="100%" height="60px"></iframe>
+      <div id="navbar-container"></div>
       <div
         class="bg-image"
         style="background-image: url(./assets/img/index.jpg); height: 390.5px; background-position: center; background-size: cover;">
@@ -53,5 +54,11 @@
         </a>
       </div>
     </main>
+    <script>
+      $(document).ready(function() {
+          // Utiliza jQuery para cargar el contenido de navbar.html
+          $("#navbar-container").load("navBar.html");
+      });
+    </script>
   </body>
 </html>
