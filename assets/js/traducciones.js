@@ -82,8 +82,6 @@ function getTextoTraducido(clave) {
 }
 
 function actualizarTraducciones() {
-  console.log('Actualizando Idioma...')
-  // Actualiza todas las traducciones en todas las páginas
   const elementosTitulo = document.querySelectorAll('.bienvenido');
   const elementosLlamar = document.querySelectorAll('.llamar');
   const elementosMenu = document.querySelectorAll('.menu');
@@ -141,8 +139,4 @@ function actualizarTraducciones() {
   elementosConfirm.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('confirm-pass');
   });
-
-    // elementosParrafo.forEach(function(elemento) {
-    //     elemento.innerText = getTextoTraducido('parrafo');
-    // });
 }
