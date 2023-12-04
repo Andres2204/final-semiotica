@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="assets/css/index.css" />
 
-  <title>Nombre</title>
+  <title>Usuario</title>
 </head>
 
 <body class="bg-image" style="background-image: url('assets/img/Rectángulo6.png');">
@@ -32,9 +32,9 @@
           <div class="card">
             <div class="card-body">
               <div class="mb-3">
-                <label for="" class="form-label">Email</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                  placeholder="informacion">
+                <label for="" class="form-label">Usuario</label>
+                <input type="text" class="form-control" name="" id="usuario" aria-describedby="helpId"
+                  placeholder="">
               </div>
             </div>
           </div>
@@ -44,8 +44,19 @@
             <div class="card-body">
               <div class="mb-3">
                 <label for="" class="form-label">Contraseña</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                  placeholder="informacion">
+                <input type="text" class="form-control" name="" id="contraseña" aria-describedby="helpId"
+                  placeholder="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="text" class="form-control" name="" id="email" aria-describedby="helpId"
+                  placeholder="">
               </div>
             </div>
           </div>
@@ -55,8 +66,8 @@
             <div class="card-body">
               <div class="mb-3">
                 <label for="" class="form-label">Cedula</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                  placeholder="informacion">
+                <input type="text" class="form-control" name="" id="cedula" aria-describedby="helpId"
+                  placeholder="">
               </div>
             </div>
           </div>
@@ -66,8 +77,8 @@
             <div class="card-body">
               <div class="mb-3">
                 <label for="" class="form-label">Fecha de Nacimiento</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                  placeholder="informacion">
+                <input type="text" class="form-control" name="" id="FechaNacimiento" aria-describedby="helpId"
+                  placeholder="">
               </div>
             </div>
           </div>
@@ -87,7 +98,7 @@
       </div>
       <div class="col">
         <div id="acciones" class="d-flex flex-row justify-content-between p-5" style="width: 100%">
-          <button class="btn m-4 btn-rounded boton-grande">Guardar Modificaciones</button>
+          <button class="btn m-4 btn-rounded boton-grande" id="guardar">Guardar Modificaciones</button>
         </div>
       </div>
     </div>
@@ -96,7 +107,7 @@
   <script>
     $("#navbar").load("/navbar.html");
   </script>
-
+  <script src="assets/js/usuario.js"></script>
   <script src="https://kit.fontawesome.com/48ff61c814.js" crossorigin="anonymous"></script>
 </body>
 

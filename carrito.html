@@ -22,7 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/index.css" />
 
-    <title>Nombre</title>    
+    <title>Carrito</title>    
     <script src="./assets/js/traducciones.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -42,7 +42,7 @@
             <button class="btn comprar btn-primary">Comprar</button>
           </div>
 
-          <div class="card-body">
+          <div class="card-body d-flex flex-wrap">
             <div id="productosCarrito">
               
             </div>
@@ -51,9 +51,7 @@
       </div>
     </main>
 
-    <script>
-      $("#navbar").load("/navbar.html");
-    </script>
+    <script> $("#navbar").load("/navbar.html"); </script>
 
     <script src="assets/js/carrito.js"></script>
 
