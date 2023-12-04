@@ -76,6 +76,18 @@ function getTextoTraducido(clave) {
           'es': 'Registrarse',
           'en': 'Sign In'
         },
+        'carritocomp': {
+          'es': 'Carrito de compras',
+          'en': 'Cart'
+        },
+        'comprar': {
+          'es': 'Comprar',
+          'en': 'Buy'
+        },
+        'adicional': {
+          'es': 'Precio Adicional',
+          'en': 'Aditional Price'
+        },
     };
 
     return traducciones[clave][idiomaActual];
@@ -96,6 +108,9 @@ function actualizarTraducciones() {
   const elementosPass = document.querySelectorAll('.pass');
   const elementosRegister = document.querySelectorAll('.register');
   const elementosConfirm = document.querySelectorAll('.confirm-pass');
+  const elementosCarritocomp = document.querySelectorAll('.carritocomp');
+  const elementosComprar = document.querySelectorAll('.comprar');
+  const elementosAdicional = document.querySelectorAll('.adicional');
   
   elementosTitulo.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('bienvenido');
@@ -138,5 +153,14 @@ function actualizarTraducciones() {
   });
   elementosConfirm.forEach(function (elemento) {
     elemento.innerText = getTextoTraducido('confirm-pass');
+  });
+  elementosCarritocomp.forEach(function (elemento) {
+    elemento.innerText = getTextoTraducido('carritocomp');
+  });
+  elementosComprar.forEach(function (elemento) {
+    elemento.innerText = getTextoTraducido('comprar');
+  });
+  elementosAdicional.forEach(function (elemento) {
+    elemento.innerText = getTextoTraducido('adicional');
   });
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="elementoConTema">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,10 +22,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/configuraciones.css" />
+    <script src="./assets/js/configuraciones.js"></script>
     <script src="./assets/js/traducciones.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-          actualizarTraducciones();
+        tema();
       });
     </script>
 
@@ -43,8 +44,8 @@
           <div class="row">
             <div class="col-sm-2">
               <div class="form-check form-switch mt-5">
-                <label class="form-check-label dark" for="flexSwitchCheckChecked">Modo Oscuro</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label dark" for="flexSwitchCheckChecked" >Modo Oscuro</label>
+                <input class="form-check-input" type="checkbox" role="switch" onchange="darkMode()" id="flexSwitchCheckChecked" checked="actual">
               </div>
             </div>
             <div class="col-sm-2">

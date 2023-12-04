@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" id="elementoConTema">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,8 @@
     <script src="./assets/js/traducciones.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-          actualizarTraducciones();
+        actualizarTraducciones();
+        tema();
       });
     </script>
   </head>
@@ -37,8 +38,8 @@
       <div class="container">
         <div class="card">
           <div class="card-header container-fluid">
-            <h3>Carrito de compras</h3>
-            <button class="btn btn-primary">comprar!</button>
+            <h3 class="carritocomp">Carrito de compras</h3>
+            <button class="btn comprar btn-primary">Comprar</button>
           </div>
 
           <div class="card-body">
