@@ -29,63 +29,14 @@
   <body>
     <header id="navbar" style="width: 100%"></header>
 
-    <main class="dinamic-bg">
+    <main class="dinamic-bg w-100">
 
-      <div id="menuContainer"></div>
-
-      <div class="card " style="max-width: 390px">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/img/1.jpg" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="Card Image" />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card Title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Price: $9.65</small>
-              </p>
-              <button class="btn btn-primary toggleDetailsBtn">Mostrar Detalles</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Contenedor separado para los detalles -->
-      <div class="details-container" style="display: none;">
-        <div class="card mb-3" style="max-width: 390px">
-          <div class="row g-0">
-            <div class="col-md-8">
-              <div class="card-body">
-                <!-- Contenido de detalles (pueden ser los ingredientes, por ejemplo) -->
-                <p>Ingredientes: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <script>
-        $(document).ready(function () {
-          // Evento de clic para mostrar/ocultar detalles
-          $(document).on('click', '.toggleDetailsBtn', function () {
-            var detailsContainer = $('.details-container');
-            detailsContainer.slideToggle();
-          });
-        });
-      </script>
+      <div id="menuContainer" class="p-2 row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0"></div>
 
       <button
         class="btn m-4 btn-rounded btn-primary"
         onclick="location.href='carrito.html'"
-        style="
-          display: absolute;
-          position: sticky;
-          bottom: 50px;
-          right: 50px;
-        "
+        style="display: absolute; position: sticky; bottom: 50px; right: 50px"
       >
         Ir al carrito
       </button>

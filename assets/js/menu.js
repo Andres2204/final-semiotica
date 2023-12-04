@@ -317,42 +317,172 @@ $(document).ready(function () {
     dish = dishesArray[i];
     // Crear un nuevo elemento de tarjeta para cada objeto en el array
     var newCardElement = `
-        <div class="card m-3" style="max-width: 30vw;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/img/${
-                dish.id
-              }.jpg" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="imagen${
-      dish.id
-    }" />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">${dish.dish_name}</h5>
-                <p class="card-text desc">${dish.description}</p>
-                <p class="card-text">
-                  <small class="text-muted">Price: $${dish.price.toFixed(
-                    2
-                  )}</small>
-                </p>
-                <button class="btn btn-primary añadirCarrito" data-dish-id="${
-                  dish.id
-                }">Agregar al carrito</button>
-                <button class="expandirbtn"><i class="fa-solid fa-chevron-up"></i></button>
+    <div class="col mb-2">
+  
+    <div class="card mb-3" style="max-width: 390px">
+    <div class="row g-0">
+      <img
+        src="./assets/img/platos/${dish.id}.jpg"
+        class="img-fluid rounded w-100 h-100 object-fit-cover card-img-top"
+        alt="Card Image"
+      />
+      <div class="container">
+        <div class="card-body w-100">
+          <h5 class="card-title">${dish.dish_name}</h5>
+          <p class="card-text">
+            ${dish.description}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Price: $${dish.price}</small>
+          </p>
+
+          <!-- Contenedor flexible para los botones con mayor separación -->
+          <div class="d-flex justify-content-between mb-3">
+            <!-- Botón para agregar al carrito con mayor margen derecho -->
+            <span>
+              <button
+                class="btn btn-primary addToCartBtn mr-4"
+                data-dish-id="${dish.id}"
+              >
+                Agregar al carrito
+              </button>
+            </span>
+
+            <!-- Botón para mostrar/ocultar detalles con mayor margen izquierdo -->
+            <span>
+              <button class="btn btn-primary toggleDetailsBtn ml-4">
+                Mostrar Detalles
+              </button>
+            </span>
+          </div>
+
+
+          <!-- Contenedor separado para los detalles (inicialmente oculto) -->
+          <div class="details-container" style="display: none">
+            <div class="card mb-3" style="max-width: 390px">
+              <div class="row g-0">
+                <div class="col">
+                  <div class="card-body">
+                    <!-- Formulario con checkboxes y campo de texto -->
+                    <form class="ingredientForm">
+                      <div class="mb-3">
+                        <label class="form-label">Ingredientes:</label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="ingredient1"
+                            id="ingredient1"
+                          />
+                          <label class="form-check-label" for="ingredient1"
+                            >Ingrediente 1</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="ingredient2"
+                            id="ingredient2"
+                          />
+                          <label class="form-check-label" for="ingredient2"
+                            >Ingrediente 2</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="ingredient3"
+                            id="ingredient3"
+                          />
+                          <label class="form-check-label" for="ingredient2"
+                            >Ingrediente 3</label
+                          >
+                        </div>
+                        <!-- Agrega más checkboxes según sea necesario -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="additionalNotes" class="form-label"
+                          >Notas adicionales:</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="additionalNotes"
+                          name="additionalNotes"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Fin del contenedor de detalles -->
         </div>
+      </div>
+    </div>
+  </div>
+
+    </div
       `;
 
     // Agregar el nuevo elemento de tarjeta al contenedor existente
     $("#menuContainer").append(newCardElement);
   }
 
-  // Iterar sobre el array y agregar elementos a la tarjeta
-  // Evento de clic para extraer el ID del botón
-  $(document).on("click", ".añadirCarrito", function () {
-    var dishId = $(this).data("dish-id");
-    alert("ID del plato: " + dishId);
+  // Objeto para almacenar datos del carrito
+  var cartDataObject = {};
+
+  // Evento de clic para añadir al carrito
+  $(document).on('click', '.addToCartBtn', function () {
+    // Obtener datos específicos del elemento clicado
+    var dishId = $(this).data('dish-id');
+    var dishName = $(this).closest('.card-body').find('.card-title').text();
+
+    // Obtener el precio de la estructura "$x.xx"
+    var priceText = $(this).closest('.card-body').find('.text-muted').text();
+    var dishPrice = parseFloat(priceText.replace('Price: $', ''));
+
+    // Obtener datos del formulario
+    var formData = $(this).closest('.card-body').find('.ingredientForm').serializeArray();
+
+    // Construir objeto con los datos del formulario
+    var formObject = {};
+    $.each(formData, function (index, field) {
+      formObject[field.name] = field.value;
+    });
+
+    // Verificar si el plato ya está en el carrito
+    if (cartDataObject[dishId]) {
+      cartDataObject[dishId].quantity += 1;
+    } else {
+      cartDataObject[dishId] = {
+        dishId: dishId,
+        quantity: 1,
+        dishName: dishName,
+        dishPrice: dishPrice,
+        formData: formObject
+        // Puedes agregar más propiedades según sea necesario
+      };
+    }
+
+    // Ocultar el botón de enviar
+    $(this).closest('.card-body').find('.ingredientForm').find('button[type="submit"]').hide();
+
+    // Aquí puedes trabajar con el objeto cartDataObject como desees
+    console.log(cartDataObject);
   });
-});
+
+  // Evento de clic para mostrar/ocultar detalles
+  $(document).on("click", ".toggleDetailsBtn", function () {
+    var detailsContainer = $(this)
+      .closest(".card-body")
+      .find(".details-container");
+    detailsContainer.slideToggle();
+  });
+
+    // Aquí puedes trabajar con el objeto cartDataObject como desees
+    console.log(cartDataObject);
+  });
