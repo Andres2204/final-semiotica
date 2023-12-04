@@ -1,313 +1,193 @@
 const cartillaEntera = [
   {
     id: 1,
-    dish_name: "pharetra magna ac",
+    dish_name: "a pede",
     description:
-      "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-    price: 30.77,
-    ingredients:
-      "ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus",
-    vegetarian: true,
+      "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+    price: 18.98,
+    ingredients: [
+      { ingredient_name: "Sal", ingredient_price: 1.5 },
+      { ingredient_name: "Pimienta", ingredient_price: 1.0 },
+      { ingredient_name: "Cebolla", ingredient_price: 2.3 },
+      { ingredient_name: "Tomate", ingredient_price: 2.0 },
+    ],
   },
   {
     id: 2,
-    dish_name: "fusce lacus purus",
+    dish_name: "eget semper",
     description:
-      "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
-    price: 9.65,
-    ingredients:
-      "curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien",
-    vegetarian: true,
+      "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+    price: 74.0,
+    ingredients: [
+      { ingredient_name: "Ajo", ingredient_price: 2.0 },
+      { ingredient_name: "Cilantro", ingredient_price: 1.8 },
+      { ingredient_name: "Pimiento", ingredient_price: 2.5 },
+      { ingredient_name: "Jengibre", ingredient_price: 3.0 },
+    ],
   },
   {
     id: 3,
-    dish_name: "libero quis orci",
-    description: "Suspendisse accumsan tortor quis turpis. Sed ante.",
-    price: 8.36,
-    ingredients:
-      "pede ullamcorper augue a suscipit nulla elit ac nulla sed vel",
-    vegetarian: false,
+    dish_name: "integer aliquet massa",
+    description:
+      "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    price: 44.36,
+    ingredients: [
+      { ingredient_name: "Aceitunas", ingredient_price: 2.2 },
+      { ingredient_name: "Albahaca", ingredient_price: 1.7 },
+    ],
   },
   {
     id: 4,
-    dish_name: "sociis natoque penatibus",
+    dish_name: "amet sapien",
     description:
-      "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.",
-    price: 24.22,
-    ingredients:
-      "suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa",
-    vegetarian: false,
+      "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
+    price: 63.14,
+    ingredients: [
+      { ingredient_name: "Queso", ingredient_price: 4.0 },
+      { ingredient_name: "Jamón", ingredient_price: 3.5 },
+    ],
   },
   {
     id: 5,
-    dish_name: "tincidunt eu felis",
+    dish_name: "in quis",
     description:
-      "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.",
-    price: 48.59,
-    ingredients:
-      "vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna",
-    vegetarian: false,
+      "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    price: 50.48,
+    ingredients: [
+      { ingredient_name: "Papas", ingredient_price: 2.5 },
+      { ingredient_name: "Aguacate", ingredient_price: 2.8 },
+      { ingredient_name: "Salsa", ingredient_price: 1.0 },
+      { ingredient_name: "Cilantro", ingredient_price: 1.8 },
+      { ingredient_name: "Limón", ingredient_price: 1.5 },
+    ],
   },
   {
     id: 6,
-    dish_name: "magnis dis parturient",
-    description:
-      "Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
-    price: 42.36,
-    ingredients:
-      "amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac",
-    vegetarian: false,
+    dish_name: "velit eu est",
+    description: "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    price: 42.45,
+    ingredients: [
+      { ingredient_name: "Aceite de Oliva", ingredient_price: 3.0 },
+      { ingredient_name: "Ajo", ingredient_price: 2.0 },
+      { ingredient_name: "Romero", ingredient_price: 2.5 },
+    ],
   },
   {
     id: 7,
-    dish_name: "donec vitae nisi",
+    dish_name: "nulla",
     description:
-      "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.",
-    price: 10.04,
-    ingredients:
-      "lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi",
-    vegetarian: true,
+      "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+    price: 56.45,
+    ingredients: [
+      { ingredient_name: "Mozzarella", ingredient_price: 4.2 },
+      { ingredient_name: "Tomate", ingredient_price: 2.0 },
+      { ingredient_name: "Albahaca", ingredient_price: 1.7 },
+      { ingredient_name: "Aceitunas", ingredient_price: 2.2 },
+      { ingredient_name: "Aceite de Oliva", ingredient_price: 3.0 },
+    ],
   },
   {
     id: 8,
-    dish_name: "luctus tincidunt nulla",
+    dish_name: "vivamus metus arcu",
     description:
-      "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.",
-    price: 21.27,
-    ingredients:
-      "ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices",
-    vegetarian: false,
+      "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+    price: 79.96,
+    ingredients: [
+      { ingredient_name: "Pollo", ingredient_price: 6.5 },
+      { ingredient_name: "Papas", ingredient_price: 2.5 },
+      { ingredient_name: "Cebolla", ingredient_price: 2.3 },
+      { ingredient_name: "Zanahoria", ingredient_price: 1.5 },
+    ],
   },
   {
     id: 9,
-    dish_name: "sapien varius ut",
+    dish_name: "etiam",
     description:
-      "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
-    price: 31.87,
-    ingredients:
-      "montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis",
-    vegetarian: false,
+      "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    price: 69.16,
+    ingredients: [
+      { ingredient_name: "Queso", ingredient_price: 4.0 },
+      { ingredient_name: "Tomate", ingredient_price: 2.0 },
+      { ingredient_name: "Lechuga", ingredient_price: 1.2 },
+      { ingredient_name: "Mayonesa", ingredient_price: 1.0 },
+    ],
   },
   {
     id: 10,
-    dish_name: "amet justo morbi",
-    description: "Aliquam erat volutpat. In congue. Etiam justo.",
-    price: 11.92,
-    ingredients:
-      "lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo",
-    vegetarian: false,
+    dish_name: "sed",
+    description:
+      "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    price: 9.82,
+    ingredients: [
+      { ingredient_name: "Salsa de Tomate", ingredient_price: 1.0 },
+      { ingredient_name: "Queso", ingredient_price: 2.0 },
+    ],
   },
   {
     id: 11,
-    dish_name: "ultrices vel augue",
+    dish_name: "libero rutrum",
     description:
-      "Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.",
-    price: 29.0,
-    ingredients:
-      "curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris",
-    vegetarian: false,
+      "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    price: 12.43,
+    ingredients: [
+      { ingredient_name: "Aceitunas", ingredient_price: 1.2 },
+      { ingredient_name: "Albahaca", ingredient_price: 2.5 },
+      { ingredient_name: "Tomillo", ingredient_price: 1.8 },
+      { ingredient_name: "Orégano", ingredient_price: 2.0 },
+      { ingredient_name: "Laurel", ingredient_price: 1.5 },
+    ],
   },
   {
     id: 12,
-    dish_name: "in lacus curabitur",
+    dish_name: "lectus in",
     description:
-      "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.",
-    price: 7.4,
-    ingredients:
-      "ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam",
-    vegetarian: false,
+      "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    price: 53.26,
+    ingredients: [
+      { ingredient_name: "Camarones", ingredient_price: 8.0 },
+      { ingredient_name: "Calamares", ingredient_price: 6.5 },
+    ],
   },
   {
     id: 13,
-    dish_name: "bibendum felis sed",
+    dish_name: "nibh quisque",
     description:
-      "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",
-    price: 39.99,
-    ingredients:
-      "hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur",
-    vegetarian: false,
+      "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+    price: 66.47,
+    ingredients: [
+      { ingredient_name: "Papas", ingredient_price: 3.0 },
+      { ingredient_name: "Zanahorias", ingredient_price: 2.2 },
+      { ingredient_name: "Espinacas", ingredient_price: 1.8 },
+    ],
   },
   {
     id: 14,
-    dish_name: "erat curabitur gravida",
+    dish_name: "sapien urna",
     description:
-      "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
-    price: 29.6,
-    ingredients:
-      "parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis",
-    vegetarian: true,
+      "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+    price: 68.16,
+    ingredients: [
+      { ingredient_name: "Acelgas", ingredient_price: 2.0 },
+      { ingredient_name: "Alubias", ingredient_price: 2.5 },
+      { ingredient_name: "Maíz", ingredient_price: 1.5 },
+      { ingredient_name: "Aceitunas negras", ingredient_price: 2.2 },
+    ],
   },
   {
     id: 15,
-    dish_name: "primis in faucibus",
+    dish_name: "eu",
     description:
-      "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
-    price: 6.13,
-    ingredients:
-      "pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
-    vegetarian: false,
-  },
-  {
-    id: 16,
-    dish_name: "nec euismod scelerisque",
-    description:
-      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.",
-    price: 40.75,
-    ingredients: "potenti in eleifend quam a odio in hac habitasse platea",
-    vegetarian: false,
-  },
-  {
-    id: 17,
-    dish_name: "habitasse platea dictumst",
-    description:
-      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.",
-    price: 31.33,
-    ingredients:
-      "ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo",
-    vegetarian: true,
-  },
-  {
-    id: 18,
-    dish_name: "in lectus pellentesque",
-    description:
-      "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-    price: 9.13,
-    ingredients:
-      "semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut",
-    vegetarian: true,
-  },
-  {
-    id: 19,
-    dish_name: "porttitor lorem id",
-    description:
-      "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
-    price: 35.93,
-    ingredients:
-      "viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper",
-    vegetarian: false,
-  },
-  {
-    id: 20,
-    dish_name: "sem sed sagittis",
-    description: "Nulla mollis molestie lorem.",
-    price: 18.67,
-    ingredients:
-      "nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis",
-    vegetarian: true,
-  },
-  {
-    id: 21,
-    dish_name: "suspendisse potenti in",
-    description:
-      "Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.",
-    price: 35.58,
-    ingredients:
-      "metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-    vegetarian: false,
-  },
-  {
-    id: 22,
-    dish_name: "volutpat sapien arcu",
-    description: "Nulla ut erat id mauris vulputate elementum. Nullam varius.",
-    price: 37.11,
-    ingredients:
-      "turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel",
-    vegetarian: true,
-  },
-  {
-    id: 23,
-    dish_name: "et magnis dis",
-    description: "Vestibulum rutrum rutrum neque.",
-    price: 47.41,
-    ingredients:
-      "donec diam neque vestibulum eget vulputate ut ultrices vel augue",
-    vegetarian: true,
-  },
-  {
-    id: 24,
-    dish_name: "ac est lacinia",
-    description: "Fusce consequat. Nulla nisl.",
-    price: 9.07,
-    ingredients:
-      "sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae",
-    vegetarian: true,
-  },
-  {
-    id: 25,
-    dish_name: "posuere nonummy integer",
-    description:
-      "Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-    price: 36.83,
-    ingredients:
-      "vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum",
-    vegetarian: true,
-  },
-  {
-    id: 26,
-    dish_name: "viverra diam vitae",
-    description:
-      "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
-    price: 36.86,
-    ingredients:
-      "scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas",
-    vegetarian: false,
-  },
-  {
-    id: 27,
-    dish_name: "sed tincidunt eu",
-    description:
-      "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-    price: 49.82,
-    ingredients:
-      "rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin",
-    vegetarian: true,
-  },
-  {
-    id: 28,
-    dish_name: "turpis nec euismod",
-    description:
-      "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
-    price: 23.06,
-    ingredients:
-      "vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet",
-    vegetarian: false,
-  },
-  {
-    id: 29,
-    dish_name: "cras non velit",
-    description:
-      "Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio.",
-    price: 19.06,
-    ingredients:
-      "eget tempus vel pede morbi porttitor lorem id ligula suspendisse",
-    vegetarian: true,
-  },
-  {
-    id: 30,
-    dish_name: "odio donec vitae",
-    description:
-      "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
-    price: 29.34,
-    ingredients:
-      "eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante",
-    vegetarian: true,
+      "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+    price: 72.41,
+    ingredients: [
+      { ingredient_name: "Queso feta", ingredient_price: 3.0 },
+      { ingredient_name: "Tomates cherry", ingredient_price: 2.5 },
+      { ingredient_name: "Aceitunas verdes", ingredient_price: 1.8 },
+      { ingredient_name: "Alcaparras", ingredient_price: 2.0 },
+      { ingredient_name: "Pepinillos", ingredient_price: 1.5 },
+    ],
   },
 ];
-
-function añadirAlCarritoLocalStorage(objeto) {
-  const objetoNuevo = JSON.parse(localStorage.getItem("carrito"));
-  if (objetoNuevo == undefined) {
-    objetoNuevo = objetoNuevo.append(objeto);
-  } else {
-    objetoNuevo;
-  }
-
-  localStorage.setItem(objetoNuevo);
-}
-
-function eliminarLocalStorage() {}
-
-function modificarLocalStorage() {}
 
 $(document).ready(function () {
   // Tu array de objetos
@@ -315,6 +195,29 @@ $(document).ready(function () {
   // Función para agregar elementos a la tarjeta
   for (var i = 0; i < dishesArray.length; i++) {
     dish = dishesArray[i];
+
+    // Crear Elementos para los ingredientes
+
+    ingredientes = "";
+
+    dish.ingredients.forEach(e => {
+      ingredientes += `
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="${e.ingredient_name} + $${e.ingredient_price}"
+          data-price="${e.ingredient_price}"
+          id="${e.ingredient_name + dish.id}"
+        />
+        <label class="form-check-label" for="${e.ingredient_name}"
+          >${e.ingredient_name} + $${e.ingredient_price}</label
+        >
+      </div>`;
+    });
+
+    
+
     // Crear un nuevo elemento de tarjeta para cada objeto en el array
     var newCardElement = `
     <div class="col mb-2">
@@ -367,39 +270,7 @@ $(document).ready(function () {
                     <form class="ingredientForm">
                       <div class="mb-3">
                         <label class="form-label">Ingredientes:</label>
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="ingredient1"
-                            id="ingredient1"
-                          />
-                          <label class="form-check-label" for="ingredient1"
-                            >Ingrediente 1</label
-                          >
-                        </div>
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="ingredient2"
-                            id="ingredient2"
-                          />
-                          <label class="form-check-label" for="ingredient2"
-                            >Ingrediente 2</label
-                          >
-                        </div>
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="ingredient3"
-                            id="ingredient3"
-                          />
-                          <label class="form-check-label" for="ingredient2"
-                            >Ingrediente 3</label
-                          >
-                        </div>
+                        ${ingredientes}                   
                         <!-- Agrega más checkboxes según sea necesario -->
                       </div>
                       <div class="mb-3">
@@ -433,46 +304,48 @@ $(document).ready(function () {
   }
 
   // Objeto para almacenar datos del carrito
-  var cartDataObject = {};
+  var cardDataObject = {};
 
   // Evento de clic para añadir al carrito
-  $(document).on('click', '.addToCartBtn', function () {
+  $(document).on("click", ".addToCartBtn", function () {
     // Obtener datos específicos del elemento clicado
-    var dishId = $(this).data('dish-id');
-    var dishName = $(this).closest('.card-body').find('.card-title').text();
-
+    var dishId = $(this).data("dish-id");
+    var dishName = $(this).closest(".card-body").find(".card-title").text();
+  
     // Obtener el precio de la estructura "$x.xx"
-    var priceText = $(this).closest('.card-body').find('.text-muted').text();
-    var dishPrice = parseFloat(priceText.replace('Price: $', ''));
-
+    var priceText = $(this).closest(".card-body").find(".text-muted").text();
+    var dishPrice = parseFloat(priceText.replace("Price: $", ""));
+  
     // Obtener datos del formulario
-    var formData = $(this).closest('.card-body').find('.ingredientForm').serializeArray();
-
-    // Construir objeto con los datos del formulario
-    var formObject = {};
-    $.each(formData, function (index, field) {
-      formObject[field.name] = field.value;
-    });
-
-    // Verificar si el plato ya está en el carrito
-    if (cartDataObject[dishId]) {
-      cartDataObject[dishId].quantity += 1;
+    var formData = $(this).closest(".card-body").find(".ingredientForm").serializeArray();
+  
+    // Construir un identificador único para esta variante del plato
+    var variantId = dishId + "-" + formData.map(item => item.value).join("-");
+  
+    // Crear un objeto de plato
+    var dishObject = {
+      dishId: dishId,
+      dishName: dishName,
+      dishPrice: dishPrice,
+      ingredients: formData, // Almacenar ingredientes seleccionados
+      additionalNotes: formData.additionalNotes, // Almacenar notas adicionales
+      quantity: 1,
+    };
+  
+    // Obtener el carrito actual del Local Storage
+    var cart = getCart();
+  
+    // Verificar si ya existe esta variante en el carrito
+    if (cart[variantId]) {
+      // Actualizar la cantidad si ya existe
+      cart[variantId].quantity += 1;
     } else {
-      cartDataObject[dishId] = {
-        dishId: dishId,
-        quantity: 1,
-        dishName: dishName,
-        dishPrice: dishPrice,
-        formData: formObject
-        // Puedes agregar más propiedades según sea necesario
-      };
+      // Agregar la nueva variante al carrito
+      cart[variantId] = dishObject;
     }
-
-    // Ocultar el botón de enviar
-    $(this).closest('.card-body').find('.ingredientForm').find('button[type="submit"]').hide();
-
-    // Aquí puedes trabajar con el objeto cartDataObject como desees
-    console.log(cartDataObject);
+  
+    // Actualizar el carrito en el Local Storage
+    updateCart(cart);
   });
 
   // Evento de clic para mostrar/ocultar detalles
@@ -482,7 +355,70 @@ $(document).ready(function () {
       .find(".details-container");
     detailsContainer.slideToggle();
   });
+});
 
-    // Aquí puedes trabajar con el objeto cartDataObject como desees
-    console.log(cartDataObject);
-  });
+function updateCart(cart) {
+  localStorage.setItem("carrito", JSON.stringify(cart));
+}
+
+// Función para obtener el carrito del Local Storage
+function getCart() {
+  return JSON.parse(localStorage.getItem("carrito")) || {};
+}
+
+
+
+// Función para agregar un plato al carrito en el Local Storage
+function addToCart(dishId, quantity, dishName, dishPrice, formData) {
+  // Obtener datos actuales del carrito del Local Storage
+  let cart = JSON.parse(localStorage.getItem("carrito")) || {};
+
+  // Verificar si el plato ya está en el carrito
+  if (cart[dishId]) {
+    // Actualizar la cantidad si ya existe
+    cart[dishId].quantity += quantity;
+  } else {
+    // Agregar el nuevo plato al carrito
+    cart[dishId] = {
+      dishId: dishId,
+      quantity: quantity,
+      dishName: dishName,
+      dishPrice: dishPrice,
+      formData: formData,
+    };
+  }
+
+  // Actualizar el carrito en el Local Storage
+  localStorage.setItem("carrito", JSON.stringify(cart));
+}
+
+// Función para obtener el carrito del Local Storage
+function getCart() {
+  return JSON.parse(localStorage.getItem("carrito")) || {};
+}
+
+// Función para actualizar la cantidad de un plato en el carrito
+function updateQuantity(dishId, newQuantity) {
+  // Obtener datos actuales del carrito del Local Storage
+  let cart = JSON.parse(localStorage.getItem("carrito")) || {};
+
+  // Verificar si el plato está en el carrito
+  if (cart[dishId]) {
+    // Actualizar la cantidad
+    cart[dishId].quantity = newQuantity;
+
+    // Actualizar el carrito en el Local Storage
+    localStorage.setItem("carrito", JSON.stringify(cart));
+  }
+}
+
+
+
+// Función para limpiar completamente el carrito
+function clearCart() {
+  // Limpiar el carrito en el Local Storage
+  localStorage.removeItem("carrito");
+}
+
+const currentCart = getCart();
+console.log(currentCart);
