@@ -116,7 +116,7 @@ const cartillaEntera = [
     id: 10,
     dish_name: "sed",
     description:
-      "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+      "Los añadidos son para pertubados. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     price: 9.82,
     ingredients: [
       { ingredient_name: "Salsa de Tomate", ingredient_price: 1.0 },
@@ -144,8 +144,7 @@ const cartillaEntera = [
       "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     price: 53.26,
     ingredients: [
-      { ingredient_name: "Camarones", ingredient_price: 8.0 },
-      { ingredient_name: "Calamares", ingredient_price: 6.5 },
+      { ingredient_name: "blue leibel", ingredient_price: 99.0 },
     ],
   },
   {
@@ -155,9 +154,7 @@ const cartillaEntera = [
       "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     price: 66.47,
     ingredients: [
-      { ingredient_name: "Papas", ingredient_price: 3.0 },
-      { ingredient_name: "Zanahorias", ingredient_price: 2.2 },
-      { ingredient_name: "Espinacas", ingredient_price: 1.8 },
+      { ingredient_name: "Alcohol 70%", ingredient_price: 3.0 },
     ],
   },
   {
@@ -167,10 +164,7 @@ const cartillaEntera = [
       "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
     price: 68.16,
     ingredients: [
-      { ingredient_name: "Acelgas", ingredient_price: 2.0 },
-      { ingredient_name: "Alubias", ingredient_price: 2.5 },
-      { ingredient_name: "Maíz", ingredient_price: 1.5 },
-      { ingredient_name: "Aceitunas negras", ingredient_price: 2.2 },
+      { ingredient_name: "Base de vive 300", ingredient_price: 2.0 },
     ],
   },
   {
@@ -180,11 +174,7 @@ const cartillaEntera = [
       "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     price: 72.41,
     ingredients: [
-      { ingredient_name: "Queso feta", ingredient_price: 3.0 },
-      { ingredient_name: "Tomates cherry", ingredient_price: 2.5 },
-      { ingredient_name: "Aceitunas verdes", ingredient_price: 1.8 },
-      { ingredient_name: "Alcaparras", ingredient_price: 2.0 },
-      { ingredient_name: "Pepinillos", ingredient_price: 1.5 },
+      { ingredient_name: "Sueño de programador", ingredient_price: 3.0 },
     ],
   },
 ];

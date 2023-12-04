@@ -115,7 +115,7 @@ $(document).ready(function () {
 
   $(document).on("click", ".comprar", function () {
     localStorage.setItem("compra", JSON.stringify(generateInvoiceData(getCart())));
-    $(location).attr('href',"pago.html");
+    $(location).attr('href',"espera.html");
   });
 
   $(document).on("click", ".eliminarCarrito", function () {
